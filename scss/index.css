@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -149,4 +150,84 @@ nav a:hover {
   100% {
     opacity: 0;
   }
+}
+.apropos {
+  overflow-x: hidden;
+  position: relative;
+}
+.apropos__title {
+  color: #3f3634;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  margin: 50px;
+}
+.apropos aside {
+  position: relative;
+  width: min(80vw, 1000px);
+  margin: 50px 0;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 20px 0 black;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.apropos aside span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+.apropos aside p {
+  padding: 15px;
+  color: #3f3634;
+  font-family: "Poppins", sans-serif;
+  min-width: 100%;
+  font-weight: 300;
+  word-spacing: 2px;
+}
+.apropos__aside1, .apropos__aside3 {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.apropos__aside2, .apropos__aside4 {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.apropos a {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 2px;
+  transform: translateX(350%);
+  margin: 30px;
+}
+.apropos a button {
+  border: none;
+  border-radius: 2px;
+  padding: 15px;
+  transform: translate(-10px, -10px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #3f3634;
+  cursor: pointer;
+}
+.apropos a button:hover {
+  background-color: #ffcc34;
+  color: black;
+}
+
+.apropos__aside1.scrolled, .apropos__aside3.scrolled {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.apropos__aside2.scrolled, .apropos__aside4.scrolled {
+  transform: translateX(50%);
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */

@@ -5,3 +5,19 @@
     align-items: $align;
     flex-direction: $direction;
 }
+
+@mixin button {
+    border: none;
+    border-radius: 2px;
+    padding: 15px;
+    transform: translate(-10px, -10px);
+    font-family: $font;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: $color--hover--button;
+    cursor: pointer;
+    &:hover{
+        background-color: $color--hover--background;
+        color: $color--hover--header;
+    }
+}
