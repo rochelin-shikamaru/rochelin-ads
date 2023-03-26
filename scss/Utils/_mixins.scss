@@ -1,0 +1,6 @@
+// center bloc
+@mixin flexbox ($justify: center, $align: center, $display: flex) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
