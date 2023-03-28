@@ -69,7 +69,7 @@ for (let i = 0; i < btnMenu.length; i++) {
             sliderNav.style.top = "0";
         }
         else{
-            sliderNav.style.top = "-100%";
+            sliderNav.style.top = "-200%";
         }
     });
 }

@@ -36,7 +36,7 @@ li {
     justify-content: center;
     position: absolute;
     background-color: #221a1a;
-    top: -100%;
+    top: -200%;
     left: 0;
     z-index: 2;
     transition: all 0.3s;
@@ -518,16 +518,6 @@ div a.scrolled {
   line-height: 2rem;
   opacity: 0;
   transition: opacity 0.5s;
-}
-.contact__calendly {
-  opacity: 0;
-  transition: opacity 0.5s;
-  min-height: 0px;
-}
-@media screen and (max-width: 760px) {
-  .contact__calendly .calendly {
-    height: 1050px;
-  }
 }
 
 .contact__action.scrolled, .contact__calendly.scrolled {
