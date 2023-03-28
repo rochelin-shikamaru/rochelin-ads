@@ -10,6 +10,12 @@
     &__calendly{
         opacity: 0;
         transition: opacity 0.5s;
+        min-height: 0px;
+        .calendly{
+            @media screen and (max-width: 760px) {
+                height: 1050px;
+            }
+        }
     }
    
 }

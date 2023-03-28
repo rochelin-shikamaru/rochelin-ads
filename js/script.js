@@ -60,6 +60,7 @@ navElement.forEach(el =>{
 // active hamburger menu
 
 const sliderNav = document.querySelector("header nav");
+const mainLoad = document.querySelector(".main-load");
 for (let i = 0; i < btnMenu.length; i++) {
     btnMenu[i].addEventListener('click', function () {
         body.classList.toggle('menu-open');
@@ -72,3 +73,4 @@ for (let i = 0; i < btnMenu.length; i++) {
         }
     });
 }
+
