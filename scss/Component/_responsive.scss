@@ -1,0 +1,37 @@
+@media screen and (max-width: 760px){
+    //  header
+    header{
+        overflow-y: hidden;
+        nav{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            background-color: #221a1a;
+            top: -100%;
+            left: 0;
+            z-index: 2;
+            transition: all 0.3s;
+            
+            a{
+                margin: 25px 0;
+            }
+            
+        }
+        .btn-menu{
+            display: flex;
+        }
+    
+    }
+
+}
+
+@media screen and (max-width: 490px) {
+    .accueil{
+        &__title{
+            margin-bottom: 50px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.contact{
+    &__title{
+        @include colorTitle($marginbt: 30px);
+    }
+    &__action{
+        @include descriptionTitle;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    &__calendly{
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+   
+}
+
+// animation fade in de chaque partie du bloc
+
+.contact__action.scrolled, .contact__calendly.scrolled{
+    opacity: 1;
+}

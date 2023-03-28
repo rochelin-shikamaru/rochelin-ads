@@ -1,0 +1,85 @@
+.services{
+    background-color: cornsilk;
+    // creation de la barre
+    &__barre{
+        display: block;
+        width: Min(90%, 610px);
+        height: 5px;
+        border-radius: 10px;
+        background-color: $color--hover--button;
+        margin: 40px auto;
+    }
+    // fin
+
+    &__title{
+        @include colorTitle;
+    }
+    &__description{
+        opacity: 0;
+        transition: opacity 0.5s;
+        @include descriptionTitle;
+        span{
+            font-weight: 700;
+            background-color: whitesmoke;
+        }
+    }
+
+    // creation du bloc de services inclus
+    aside{
+        width: Min(90%, 500px);
+        margin: 90px auto;
+        border: 2px solid black;
+        border-radius: 2px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s;
+
+        div{
+            border: 2px solid $color--hover--button;
+            background-color: ivory;
+            transform: translate(-40px, -40px);
+            padding: 30px;
+            font-family: $font;
+            @media screen and (max-width: 760px) {
+                transform: translate(0,0);
+            }
+            li{
+                margin: 30px;
+                
+            }
+            span{
+                display: block;
+                width: Min(90%, 300px);
+                margin: 10px auto;
+                height: 2px;
+                border-radius: 10px;
+                background-color: $color--hover--button;
+            }
+        }
+
+        p{
+            margin: 30px 0;
+            font-family: $font;
+            font-weight: 700;
+            font-size: 1.6rem;
+
+        }
+    }
+    &__call{
+        text-align: center;
+        font-weight: 500;
+        font-family: $font;
+        font-style: italic;
+        padding: 0 100px 40px 100px;
+        opacity: 0;
+        transition: opacity 0.5s;
+        @media screen and (max-width: 760px) {
+            padding: 0 30px 40px 30px;
+        }
+    }
+}
+
+// animation fade
+.services__description.scrolled,aside.scrolled,.services__call.scrolled{
+    opacity: 1;
+}

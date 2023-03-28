@@ -5,10 +5,12 @@
 @import'./Utils/variables';
 @import'./Utils/mixins';
 
+@import'./Component/responsive';
+
 @import'./Layout/header';
 @import'./Layout/footer';
 
 @import'./Page/accueil';
 @import'./Page/apropos';
-@import'./Page/service';
+@import'./Page/services';
 @import'./Page/contact';

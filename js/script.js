@@ -16,7 +16,6 @@ setInterval(()=>{
         i++;
     }
     
-   console.log(i);
 }, 5000);
 
 // animation à propos
@@ -42,3 +41,34 @@ function elementInView(item, percentageScroll = 100) {
   window.addEventListener("scroll", () => {
     handleScrollAnimation();
   });
+
+// variables pour hamburger menu
+const btnMenu = document.getElementsByClassName("btn-menu");
+const body = document.body;
+
+//   activated nav
+const navElement = document.querySelectorAll("nav a");
+navElement.forEach(el =>{
+    el.addEventListener('click', (e) =>{
+        document.querySelector(".selected").classList.remove("selected");
+        e.target.classList.add("selected");
+        sliderNav.style.top = "-100%";
+        body.classList.toggle('menu-open');
+    })
+})
+
+// active hamburger menu
+
+const sliderNav = document.querySelector("header nav");
+for (let i = 0; i < btnMenu.length; i++) {
+    btnMenu[i].addEventListener('click', function () {
+        body.classList.toggle('menu-open');
+
+        if(body.classList.contains('menu-open')){
+            sliderNav.style.top = "0";
+        }
+        else{
+            sliderNav.style.top = "-100%";
+        }
+    });
+}

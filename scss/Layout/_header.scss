@@ -3,10 +3,10 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 200px;
+    height: 12rem;
     background-image: url('/images/background--header.png') ;
     background-position: bottom;
-     background-size: cover;
+    background-size: cover;
    
     div{
         height: 100%;
@@ -21,6 +21,7 @@ header{
 nav{
     width: Min(50vw, 500px);
     @include flexbox($justify: space-between);
+    
     
     // border: 1px solid red;
     a{
@@ -60,4 +61,67 @@ nav{
     background-color: $color--hover--background;
     border-radius: 10px;
     color: $color--hover--header;
+}
+
+// create hamburger menu
+.btn-menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.3s ease;
+    z-index: 3;
+
+    &:focus {
+        outline: none;
+    }
+
+    &__bars {
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 4px;
+        background-color: $color--hover--background;
+        transition: 0.3s;
+
+        &:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color--hover--background;
+            transition: 0.3s;
+        }
+
+        &:before {
+            transform: translate(0, -12px);
+        }
+
+        &:after {
+            transform: translate(0, 12px);
+        }
+    }
+
+    .menu-open & {
+
+        .btn-menu__bars {
+            background-color: transparent;
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
 }

@@ -16,8 +16,28 @@
     font-size: 1.2rem;
     color: $color--hover--button;
     cursor: pointer;
+    background-color: $color--hover--background;
     &:hover{
-        background-color: $color--hover--background;
         color: $color--hover--header;
     }
+}
+
+@mixin colorTitle ($marginbt: 50px) {
+        color: $color--hover--button;
+        font-family: $font;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 500;
+        margin: 50px 50px $marginbt 50px;
+        span{
+            color: $color--hover--background;
+        }
+}
+
+@mixin descriptionTitle {
+    text-align: center;
+        font-weight: 400;
+        font-family: $font;
+        padding: 10px 30px 30px 30px;
+        line-height: 2rem;
 }
