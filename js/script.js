@@ -16,7 +16,7 @@ setInterval(()=>{
         i++;
     }
     
-}, 5000);
+}, 5200);
 
 // animation à propos
 const js_scroll = document.querySelectorAll(".js-scroll");
@@ -76,9 +76,9 @@ for (let i = 0; i < btnMenu.length; i++) {
 
 //  box loading
 
-const container = document.querySelector(".container");
-const loading = document.querySelector(".loading");
 window.addEventListener("load", () => {
+    const container = document.querySelector(".container");
+    const loading = document.querySelector(".loading");
     loading.style.opacity = "0";
     container.style.display = "block";
   });
