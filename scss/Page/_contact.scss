@@ -1,4 +1,5 @@
 .contact{
+    padding-bottom: 70px;
     &__title{
         @include colorTitle($marginbt: 30px);
     }
@@ -7,20 +8,119 @@
         opacity: 0;
         transition: opacity 0.5s;
     }
-    &__calendly{
-        opacity: 0;
-        transition: opacity 0.5s;
-        .calendly{
-            @media screen and (max-width: 760px) {
-                height: 1100px;
-            }
-        }
-    }
+
    
 }
 
 // animation fade in de chaque partie du bloc
 
-.contact__action.scrolled, .contact__calendly.scrolled{
+.contact__action.scrolled{
+    opacity: 1;
+}
+
+
+//  add some style to my contact
+
+.contact__container__form{
+    background-color: cornsilk;
+    width: Min(100%, 800px);
+    margin-inline: auto;
+    padding-bottom: 70px;
+    @include flexbox($direction: column);
+    font-family: $font;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &--media{
+        @include flexbox($direction: column);
+
+        span{
+            font-style: italic;
+            font-weight: 400;
+            display: block;
+            margin-top: 70px;
+            text-align: center;
+        }
+        div{
+            a{
+                color: $color--footer;
+                font-size: 3rem;
+                margin-inline: 10px;
+                &:hover{
+                    color: $color--hover--background;
+                }
+            
+            }
+        }
+    }
+
+    p{
+        font-style: italic;
+        font-weight: 400;
+        margin: 20px 0;
+    }
+
+
+
+    &--form{
+        background: cornsilk;
+        width: Min(100%, 800px);
+        min-height: 300px;
+        padding: 30px;
+
+        input{
+            margin: 10px 0;
+            display: block;
+            font-family: $font;
+            @include border;
+            @media screen and (max-width: 760px){
+            }
+            &:nth-child(1),&:nth-child(2){
+                height: 3rem;
+                width: 100%;
+                border-color: $color--footer;
+                padding-left: 5px;
+                &:focus{
+                    outline: none;
+                }
+
+            }
+            &:nth-child(3){
+                width: 100%;
+                height: 3rem;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                transition: background-color 0.3s;
+                border: none;
+                color: $color--hover--button;
+                background-color: $color--hover--background;
+                cursor: pointer;
+                font-family: $font;
+                font-weight: 700;
+
+                &:hover{
+                    background-color: $color--hover--header;
+                    color: $color--text;
+                    transition: background-color 0.3s;
+                }
+            }
+        }
+        textarea{
+            width: 100%;
+            @include border;
+            border-color: $color--footer;
+            margin-bottom: 10px;
+            padding: 5px;
+            font-family: $font;
+            &:focus{
+                outline: none;
+            }
+        }
+
+    }
+
+
+}
+.contact__container__form.scrolled{
     opacity: 1;
 }

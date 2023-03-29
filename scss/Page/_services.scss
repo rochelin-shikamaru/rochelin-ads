@@ -13,6 +13,9 @@
 
     &__title{
         @include colorTitle;
+        @media screen and (max-width: 760px) {
+            margin-bottom: 25px;
+        }
     }
     &__description{
         opacity: 0;
@@ -33,6 +36,9 @@
         text-align: center;
         opacity: 0;
         transition: opacity 0.5s;
+        @media screen and (max-width: 760px) {
+            margin: 30px auto;
+        }
 
         div{
             border: 2px solid $color--hover--button;

@@ -3,6 +3,9 @@
     @include flexbox($direction: column);
     &__title{
         @include colorTitle;
+        @media screen and (max-width: 760px) {
+            margin-bottom: 20px;
+        }
     }
    
     aside{
@@ -12,7 +15,7 @@
             margin: 20px auto;
         }
         background: rgba( 255, 255, 255, 0.25 );
-        box-shadow: 0 8px 20px 0 $color--hover--header;
+        box-shadow: 0 8px 15px 0 $color--hover--header;
         backdrop-filter: blur( 4px );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -22,7 +25,7 @@
             color: $color--hover--button;
             font-family: $font;
             min-width: 100%;
-            font-weight: 300;
+            font-weight: 400;
             word-spacing: 2px;
         }
     }

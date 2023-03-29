@@ -203,13 +203,45 @@
             de croissance. Nous sommes impatients de travailler avec vous !
           </p>
           <!-- Calendly inline widget begin -->
-          <div class="contact__calendly js-scroll">
-            <div
-              class="calendly-inline-widget calendly"
-              data-url="https://calendly.com/rochelinads/contact"
-              style="min-width: 320px; height: 1050px"
-            ></div>
+          <div class="contact__container__form js-scroll">
+
+            <div class="contact__container__form--media">
+              <span>Nous écrire directement sur nos réseaux sociaux</span>
+              <div>
+                <a href="https://web.facebook.com/rochelinAds"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/RochelinAds/"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=237672408030&app=facebook&entry_point=page_cta&fbclid=IwAR2OL_lenfu4i78wz0G3zZuuvBsxDTaKHDW-T3hdowu8hlZfT3eOhP53AZI"><i class="fa-brands fa-square-whatsapp"></i></a>
+              </div>
+            </div>
+
+            <p>ou</p>
+
+            <form
+            action="https://formspree.io/f/xayzpqqj"
+            method="POST"
+            class="contact__container__form--form"
+            >
+            <div class="form-text-email">
+              <input type="text" placeholder="Nom" required name="Name" />
+              <input
+                type="email"
+                placeholder="Email"
+                name="Email"
+                required
+              />
+            </div>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="5"
+              placeholder="Comment pouvons nous mieux vous aidez?"
+              required
+            ></textarea>
+            <input type="submit" value="envoyer" />
+          </form>
           </div>
+          
         </section>
         
         <footer>
@@ -238,11 +270,5 @@
       </main>
     </div>
     <script src="./js/script.js"></script>
-    <!-- Calendly inline widget end -->
-    <script
-      type="text/javascript"
-      src="https://assets.calendly.com/assets/external/widget.js"
-      async
-    ></script>
   </body>
 </html>

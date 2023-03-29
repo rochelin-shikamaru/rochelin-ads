@@ -283,6 +283,7 @@ footer {
 .accueil__title {
   width: 90%;
   overflow: hidden;
+  animation: fadeIn 5s ease infinite forwards;
 }
 .accueil__title .slider {
   display: flex;
@@ -294,7 +295,6 @@ footer {
   min-width: 100%;
   color: #f0f6ea;
   font-size: clamp(1.5625rem, 0.4632rem + 4.5098vw, 3rem);
-  animation: fadeIn 5s ease infinite forwards;
 }
 .accueil__blur {
   position: absolute;
@@ -360,11 +360,16 @@ footer {
 .apropos__title span {
   color: #ffcc34;
 }
+@media screen and (max-width: 760px) {
+  .apropos__title {
+    margin-bottom: 20px;
+  }
+}
 .apropos aside {
   width: min(90vw, 900px);
   margin: 40px auto;
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 20px 0 black;
+  box-shadow: 0 8px 15px 0 black;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 10px;
@@ -380,7 +385,7 @@ footer {
   color: #3f3634;
   font-family: "Poppins", sans-serif;
   min-width: 100%;
-  font-weight: 300;
+  font-weight: 400;
   word-spacing: 2px;
 }
 .apropos__aside1, .apropos__aside3 {
@@ -470,6 +475,11 @@ div a.scrolled {
 .services__title span {
   color: #ffcc34;
 }
+@media screen and (max-width: 760px) {
+  .services__title {
+    margin-bottom: 25px;
+  }
+}
 .services__description {
   opacity: 0;
   transition: opacity 0.5s;
@@ -491,6 +501,11 @@ div a.scrolled {
   text-align: center;
   opacity: 0;
   transition: opacity 0.5s;
+}
+@media screen and (max-width: 760px) {
+  .services aside {
+    margin: 30px auto;
+  }
 }
 .services aside div {
   border: 2px solid #3f3634;
@@ -540,6 +555,9 @@ div a.scrolled {
   opacity: 1;
 }
 
+.contact {
+  padding-bottom: 70px;
+}
 .contact__title {
   color: #3f3634;
   font-family: "Poppins", sans-serif;
@@ -560,16 +578,105 @@ div a.scrolled {
   opacity: 0;
   transition: opacity 0.5s;
 }
-.contact__calendly {
+
+.contact__action.scrolled {
+  opacity: 1;
+}
+
+.contact__container__form {
+  background-color: cornsilk;
+  width: min(100%, 800px);
+  margin-inline: auto;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
   opacity: 0;
   transition: opacity 0.5s;
 }
-@media screen and (max-width: 760px) {
-  .contact__calendly .calendly {
-    height: 1100px;
-  }
+.contact__container__form--media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact__container__form--media span {
+  font-style: italic;
+  font-weight: 400;
+  display: block;
+  margin-top: 70px;
+  text-align: center;
+}
+.contact__container__form--media div a {
+  color: #221a1a;
+  font-size: 3rem;
+  margin-inline: 10px;
+}
+.contact__container__form--media div a:hover {
+  color: #ffcc34;
+}
+.contact__container__form p {
+  font-style: italic;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.contact__container__form--form {
+  background: cornsilk;
+  width: min(100%, 800px);
+  min-height: 300px;
+  padding: 30px;
+}
+.contact__container__form--form input {
+  margin: 10px 0;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.contact__container__form--form input:nth-child(1), .contact__container__form--form input:nth-child(2) {
+  height: 3rem;
+  width: 100%;
+  border-color: #221a1a;
+  padding-left: 5px;
+}
+.contact__container__form--form input:nth-child(1):focus, .contact__container__form--form input:nth-child(2):focus {
+  outline: none;
+}
+.contact__container__form--form input:nth-child(3) {
+  width: 100%;
+  height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: background-color 0.3s;
+  border: none;
+  color: #3f3634;
+  background-color: #ffcc34;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.contact__container__form--form input:nth-child(3):hover {
+  background-color: black;
+  color: #f0f6ea;
+  transition: background-color 0.3s;
+}
+.contact__container__form--form textarea {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #221a1a;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: "Poppins", sans-serif;
+}
+.contact__container__form--form textarea:focus {
+  outline: none;
 }
 
-.contact__action.scrolled, .contact__calendly.scrolled {
+.contact__container__form.scrolled {
   opacity: 1;
 }/*# sourceMappingURL=index.css.map */
