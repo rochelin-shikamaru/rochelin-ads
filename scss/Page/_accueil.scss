@@ -17,16 +17,13 @@
         width: 90%;
         overflow: hidden;
         .slider{
-            @include flexbox($justify: space-between) ;
-            animation: fadeIn 5s ease infinite forwards;
-             
+            @include flexbox($justify: space-between) ; 
         }
         &__value{
             min-width: 100%;
             color: $color--text;
             font-size: clamp(1.5625rem, 0.4632rem + 4.5098vw, 3rem);
-            
-
+            animation: fadeIn 5s ease infinite forwards;
         }
     }
     &__blur{

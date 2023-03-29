@@ -289,12 +289,12 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  animation: fadeIn 5s ease infinite forwards;
 }
 .accueil__title__value {
   min-width: 100%;
   color: #f0f6ea;
   font-size: clamp(1.5625rem, 0.4632rem + 4.5098vw, 3rem);
+  animation: fadeIn 5s ease infinite forwards;
 }
 .accueil__blur {
   position: absolute;
