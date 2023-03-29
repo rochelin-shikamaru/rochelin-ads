@@ -1,16 +1,15 @@
 .apropos{
     overflow-x: hidden;
-    position: relative;
+    @include flexbox($direction: column);
     &__title{
         @include colorTitle;
     }
+   
     aside{
-        position: relative;
-        width: Min(60vw, 1000px);
-        margin: 50px 0;
+        width: Min(90vw, 900px);
+        margin: 40px auto;
         @media screen and (max-width: 760px) {
-            margin: 50px auto;
-            width: Min(95vw, 1000px);
+            margin: 20px auto;
         }
         background: rgba( 255, 255, 255, 0.25 );
         box-shadow: 0 8px 20px 0 $color--hover--header;
@@ -33,7 +32,7 @@
         transition: all 0.5s;
     }
     &__aside2, &__aside4{
-        transform: translateX(100%);
+        transform: translateX(90%);
         opacity: 0;
         transition: all 0.5s;
     }
@@ -62,14 +61,15 @@
 // animation all fade
 
 .apropos__aside1.scrolled, .apropos__aside3.scrolled{
-    transform: translateX(30%);
+    transform: translateX(0);
     opacity: 1;
     @media screen and (max-width: 760px) {
         transform: translateX(0);
     }
 }
 .apropos__aside2.scrolled, .apropos__aside4.scrolled{
-    transform: translateX(50%);
+    
+    transform: translateX(0);
     opacity: 1;
     @media screen and (max-width: 760px) {
         transform: translateX(0);

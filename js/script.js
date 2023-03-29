@@ -16,7 +16,7 @@ setInterval(()=>{
         i++;
     }
     
-}, 5200);
+}, 5000);
 
 // animation à propos
 const js_scroll = document.querySelectorAll(".js-scroll");
