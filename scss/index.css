@@ -283,13 +283,13 @@ footer {
 .accueil__title {
   width: 90%;
   overflow: hidden;
-  animation: fadeIn 5s ease infinite forwards;
 }
 .accueil__title .slider {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  animation: fadeIn 5s ease infinite forwards;
 }
 .accueil__title__value {
   min-width: 100%;

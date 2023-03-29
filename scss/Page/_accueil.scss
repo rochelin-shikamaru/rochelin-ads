@@ -16,9 +16,9 @@
     &__title{
         width: 90%;
         overflow: hidden;
-        animation: fadeIn 5s ease infinite forwards;
         .slider{
             @include flexbox($justify: space-between) ;
+            animation: fadeIn 5s ease infinite forwards;
              
         }
         &__value{
