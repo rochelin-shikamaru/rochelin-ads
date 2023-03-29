@@ -52,7 +52,7 @@ navElement.forEach(el =>{
     el.addEventListener('click', (e) =>{
         document.querySelector(".selected").classList.remove("selected");
         e.target.classList.add("selected");
-        sliderNav.style.top = "-100%";
+        sliderNav.style.top = "-500%";
         body.classList.toggle('menu-open');
     })
 })
@@ -60,7 +60,7 @@ navElement.forEach(el =>{
 // active hamburger menu
 
 const sliderNav = document.querySelector("header nav");
-const mainLoad = document.querySelector(".main-load");
+
 for (let i = 0; i < btnMenu.length; i++) {
     btnMenu[i].addEventListener('click', function () {
         body.classList.toggle('menu-open');
@@ -69,7 +69,7 @@ for (let i = 0; i < btnMenu.length; i++) {
             sliderNav.style.top = "0";
         }
         else{
-            sliderNav.style.top = "-200%";
+            sliderNav.style.top = "-500%";
         }
     });
 }
