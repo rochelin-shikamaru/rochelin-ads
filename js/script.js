@@ -74,3 +74,11 @@ for (let i = 0; i < btnMenu.length; i++) {
     });
 }
 
+//  box loading
+
+const container = document.querySelector(".container");
+const loading = document.querySelector(".loading");
+window.addEventListener("load", () => {
+    loading.style.opacity = "0";
+    container.style.display = "block";
+  });
